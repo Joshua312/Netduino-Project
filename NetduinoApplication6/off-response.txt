@@ -1,0 +1,9 @@
+GET /OFF HTTP/1.1
+Host: 81.133.26.184:8080
+Referer: http://81.133.26.184:8080/ON
+Accept-Encoding: gzip, deflate
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-gb
+Connection: keep-alive
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 7_0 like Mac OS X) AppleWebKit/537.40 (KHTML, like Gecko) Version/6.0 Mobile/11A4372q Safari/8536.25
