@@ -62,21 +62,22 @@ namespace NetduinoApplication6
                         led.Write(false);
                     }
 
-                    //if (request.IndexOf("ON") >= 0)
-                    //{
-                    //    led.Write(true);
-                    //}
-                    //else if (request.IndexOf("OFF") >= 0)
-                    //{
-                    //    led.Write(false);
-                    //}
-
                     string statusText = (led.Read() ? "ON" : "OFF");
 
                     string response = "HTTP/1.1 200 OK\r\n" + "Content-Type: text/html; charset=utf-8\r\n\r\n"
                                       + StringUtility.Format(GetHtml(), statusText);
-
-                    clientSocket.Send(System.Text.Encoding.UTF8.GetBytes(response));
+                    try
+                    {
+                        clientSocket.Send(System.Text.Encoding.UTF8.GetBytes(response));
+                    }
+                    catch (Exception exception) {
+                        Debug.Print(exception.Message);
+                        if (exception.InnerException != null)
+                        {
+                            Debug.Print(exception.InnerException.Message);
+                        }
+                        Debug.Print(exception.StackTrace);
+                    } 
                 }
 
                 clientSocket.Close();
