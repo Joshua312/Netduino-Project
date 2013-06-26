@@ -1,0 +1,2 @@
+c:\users\joshua\documents\visual studio 2012\Projects\NetduinoApplication4\NetduinoApplication4\obj\Debug\NetduinoApplication4.csprojResolveAssemblyReference.cache
+c:\users\joshua\documents\visual studio 2012\Projects\NetduinoApplication4\NetduinoApplication4\obj\Debug\TinyCLR_DebugReferences.cache
