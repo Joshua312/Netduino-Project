@@ -1,10 +1,7 @@
-﻿using System;
-using System.Net;
-using System.Net.Sockets;
-using System.Threading;
-using Microsoft.SPOT;
+﻿using System.Threading;
+
 using Microsoft.SPOT.Hardware;
-using SecretLabs.NETMF.Hardware;
+
 using SecretLabs.NETMF.Hardware.Netduino;
 
 namespace NetduinoApplication5
@@ -35,7 +32,8 @@ namespace NetduinoApplication5
 
             string song = "C1C1C1g1a1a1g2E1E1D1D1C2";
 
-            PWM speaker = new PWM(Pins.GPIO_PIN_D5);
+            PWM speaker = new PWM(PWMChannels.PWM_PIN_D5, 100, .5, false);
+            speaker.Start();
 
             for (int i = 0; i < song.Length; i += 2)
             {
@@ -43,16 +41,17 @@ namespace NetduinoApplication5
                 int beatCount = int.Parse(song.Substring(i + 1, 1));
 
                 uint noteDuration = (uint)scale[note];
-                speaker.SetPulse(noteDuration * 2, noteDuration);
+                speaker.Duration = noteDuration;
+                speaker.Period = (noteDuration * 2);
+                
                 Thread.Sleep(beatTimeInMilliseconds * beatCount - pauseTimeInMillisenconds);
-
-                speaker.SetDutyCycle(0);
+                speaker.DutyCycle = 0;
                 Thread.Sleep(pauseTimeInMillisenconds);
             }
+
+            speaker.Stop();
         
             Thread.Sleep(Timeout.Infinite);
-        
         }
-
     }
 }

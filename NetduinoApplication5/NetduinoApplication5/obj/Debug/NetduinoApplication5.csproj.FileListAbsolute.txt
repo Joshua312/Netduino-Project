@@ -26,3 +26,5 @@ c:\users\joshua\documents\visual studio 2012\Projects\NetduinoApplication5\Netdu
 c:\users\joshua\documents\visual studio 2012\Projects\NetduinoApplication5\NetduinoApplication5\obj\Debug\le\NetduinoApplication5.pdbx
 c:\users\joshua\documents\visual studio 2012\Projects\NetduinoApplication5\NetduinoApplication5\obj\Debug\NetduinoApplication5.exe
 c:\users\joshua\documents\visual studio 2012\Projects\NetduinoApplication5\NetduinoApplication5\obj\Debug\NetduinoApplication5.pdb
+c:\Users\Joshua\Documents\Visual Studio 2012\Projects\NetduinoApplication5\NetduinoApplication5\bin\Debug\SecretLabs.NETMF.Hardware.dll
+c:\Users\Joshua\Documents\Visual Studio 2012\Projects\NetduinoApplication5\NetduinoApplication5\bin\Debug\SecretLabs.NETMF.Hardware.Netduino.dll
